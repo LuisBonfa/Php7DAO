@@ -13,8 +13,23 @@
   //$search = Usuario::search("jo");
   //echo json_encode($search);
 
-  $login = new Usuario();
+  //Login Usuario
+  //$login = new Usuario();
+  //$login->login("jose","1234");
+  //echo $login;
 
-  $login->login("jose","1234");
-  echo $login;
+
+  //Insert new User
+  //$user = new Usuario("Leonardo","senha123");
+  //$user->insertUser();
+  //echo $user;
+
+  //Update User
+  //$user = new Usuario();
+  //$user->loadById(33);
+  //$user->update("Bonfa2","minhasenha");
+  //echo $user;
+
+
+
  ?>
