@@ -117,12 +117,24 @@ public static function search($login){
     $this->setDessenha($password);
 
     $sql = new Sql();
-    
+
     $sql->query("Update tb_usuarios set deslogin = :LOGIN, dessenha = :PASSWORD where idusuario = :ID",array(
       ":LOGIN"=>$this->getDeslogin(),
       ":PASSWORD"=>$this->getDessenha(),
       ":ID"=>$this->getIdusuario()
     ));
+  }
+
+  public function deleteUser(){
+    $sql = new Sql();
+    $sql->query("Delete from tb_usuarios where idusuario = :ID",array(
+      ":ID"=>$this->getIdusuario()
+    ));
+
+    $this->setIdusuario(0);
+    $this->setDeslogin("");
+    $this->setDessenha("");
+    $this->setDtcadastro(new DateTime());
   }
 }
 

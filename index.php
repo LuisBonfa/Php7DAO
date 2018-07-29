@@ -30,6 +30,12 @@
   //$user->update("Bonfa2","minhasenha");
   //echo $user;
 
+  //$user = new Usuario();
+  //$user->loadById(30);
+  //$user->deleteUser();
+  //echo $user;
+
+
 
 
  ?>
